@@ -1,6 +1,6 @@
 .wp-block-custom-block {
-  background-color: #f0f0f0;
-  border-left: 4px solid #007cba;
-  padding: 10px;
-  font-style: italic;
+  max-width: 100%; /* Allow full width */
+  width: 100%; /* Make it take the full width */
+  margin: 0 auto; /* Center if needed */
+  background-color: aqua;
 }

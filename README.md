@@ -37,3 +37,7 @@
 
 1. In the same project directory, execute the command `npm run plugin-zip`. Ensure that the build is prepared for production by running `npm run build` first.
 2. The resulting zip file will contain the same content as the initial .php file, ready for deployment.
+
+### Reflection on Learning
+
+This project aimed to create a simple WordPress plugin using blocks, focusing on understanding the fundamentals of plugin development. Through this process, I explored the setup and structure of plugins, their integration with React JS, and interactions with the WordPress REST API for dynamic data fetching. Achieving these goals has provided a solid foundation in WordPress development. This experience serves as a stepping stone for further exploration and enhancement of my skills in the WordPress ecosystem.

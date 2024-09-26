@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development/museable-block-title",
+  "version": "0.0.1",
+  "title": "Museable Title",
+  "category": "text",
+  "icon": "heading",
+  "keywords": ["heading", "title", "text"],
+  "description": "This block will display title",
+  "example": {},
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2"
+    },
+    "level": {
+      "type": "number",
+      "default": 2
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
+  "textdomain": "custom-richtext-heading-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
+}

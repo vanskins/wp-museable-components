@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development/collections-block",
+  "title": "Museable Collections",
+  "category": "widgets",
+  "icon": "index-card",
+  "supports": {
+    "align": ["wide", "full"],
+    "lock": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style.css",
+  "style": "file:./style.css"
+}

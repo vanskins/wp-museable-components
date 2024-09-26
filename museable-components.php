@@ -85,11 +85,53 @@ function insert_custom_items()
 // Add the function to be called during plugin activation
 register_activation_hook(__FILE__, 'insert_custom_items');
 
+// Fetch rest api
+add_action('rest_api_init', function () {
+  register_rest_route('custom/v1', '/collections/', array(
+    'methods' => 'GET',
+    'callback' => 'get_collections',
+  ));
+});
+
+function get_collections()
+{
+  global $wpdb;
+  $table_name = $wpdb->prefix . 'collections';
+
+  $results = $wpdb->get_results("SELECT * FROM $table_name");
+
+  if (empty($results)) {
+    return new WP_Error('no_collections', 'No collections found', array('status' => 404));
+  }
+
+  return rest_ensure_response($results);
+}
+
+
 
 // list of plugin build should be registered
 function my_musable_components_index_register_block()
 {
   register_block_type_from_metadata(__DIR__ . '/build/museable-title');
+  register_block_type_from_metadata(__DIR__ . '/build/museable-cards', array(
+    'render_callback' => 'render_collections_block',
+  ));
 }
 
 add_action('init', 'my_musable_components_index_register_block');
+
+
+// Include the dynamic rendering function
+require_once __DIR__ . '/includes/collections-render.php';
+
+function enqueue_block_styles()
+{
+  // Enqueue frontend styles
+  wp_enqueue_style(
+    'your-plugin-style', // Handle
+    plugins_url('src/museable-cards/style.css', __FILE__), // Path to your compiled CSS
+    array(), // Dependencies
+    filemtime(plugin_dir_path(__FILE__) . 'src/museable-cards/style.css') // Version based on file modification time
+  );
+}
+add_action('enqueue_block_assets', 'enqueue_block_styles');

@@ -1,6 +1,7 @@
 import { useBlockProps } from "@wordpress/block-editor";
 import { useEffect, useState } from "@wordpress/element";
 import apiFetch from "@wordpress/api-fetch";
+import { __ } from "@wordpress/i18n";
 import {
   Spinner,
   Card,
@@ -36,19 +37,24 @@ const Edit = () => {
     return <p>{error}</p>;
   }
 
-  console.log(collections, "Collections");
+  console.log(__("Collection Items", "museable-components"), "Collections");
 
   return (
-    <div {...blockProps} className="custom-collections-block">
-      {collections.map((collection) => (
-        <div key={collection.id} className="collection-card">
-          <img src={collection.image} alt={collection.title} />
-          <div className="collection-card-body">
-            <h3>{collection.title}</h3>
-            <p>{collection.description}</p>
+    <div {...blockProps}>
+      <div>
+        <h1>{__("Collection Items", "museable-components")}</h1>
+      </div>
+      <div className="custom-collections-block">
+        {collections.map((collection) => (
+          <div key={collection.id} className="collection-card">
+            <img src={collection.image} alt={collection.title} />
+            <div className="collection-card-body">
+              <h3>{collection.title}</h3>
+              <p>{collection.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

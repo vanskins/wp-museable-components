@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 3,
+  "apiVersion": 2,
   "name": "block-development/museable-block-title",
   "version": "0.0.1",
   "title": "Museable Title",
@@ -35,7 +35,7 @@
       "background": true
     }
   },
-  "textdomain": "custom-richtext-heading-block",
+  "textdomain": "museable-components",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./index.css"

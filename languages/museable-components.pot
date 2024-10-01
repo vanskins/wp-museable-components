@@ -1,0 +1,105 @@
+# Copyright (C) 2024 Van Alfred Sabacajan
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Museable Components Plugin 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/museable-components\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-01T18:23:15+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: museable-components\n"
+
+#. Plugin Name of the plugin
+#: museable-components.php
+msgid "Museable Components Plugin"
+msgstr ""
+
+#. Description of the plugin
+#: museable-components.php
+msgid "A plugin consists of museable components, using Blocks."
+msgstr ""
+
+#. Author of the plugin
+#: museable-components.php
+msgid "Van Alfred Sabacajan"
+msgstr ""
+
+#. Author URI of the plugin
+#: museable-components.php
+msgid "https://github.com/vanskins/wp-museable-components"
+msgstr ""
+
+#: includes/collections-render.php:8
+#: build/museable-cards/index.js:58
+#: build/museable-cards/index.js:63
+#: src/museable-cards/edit.js:40
+#: src/museable-cards/edit.js:45
+#: build/museable-cards/index.js:40
+#: build/museable-cards/index.js:45
+msgid "Collection Items"
+msgstr ""
+
+#: build/museable-title/index.js:86
+#: src/museable-title/edit.js:63
+#: build/museable-title/index.js:63
+msgid "Color Settings"
+msgstr ""
+
+#: build/museable-title/index.js:90
+#: src/museable-title/edit.js:68
+#: build/museable-title/index.js:68
+msgid "Text Color"
+msgstr ""
+
+#: build/museable-title/index.js:95
+#: src/museable-title/edit.js:74
+#: build/museable-title/index.js:74
+msgid "Background Color"
+msgstr ""
+
+#: build/museable-title/index.js:103
+#: src/museable-title/edit.js:85
+#: build/museable-title/index.js:85
+msgid "Add heading..."
+msgstr ""
+
+#: build/museable-cards/block.json
+#: src/museable-cards/block.json
+msgctxt "block title"
+msgid "Museable Collections"
+msgstr ""
+
+#: build/museable-title/block.json
+#: src/museable-title/block.json
+msgctxt "block title"
+msgid "Museable Title"
+msgstr ""
+
+#: build/museable-title/block.json
+#: src/museable-title/block.json
+msgctxt "block keyword"
+msgid "heading"
+msgstr ""
+
+#: build/museable-title/block.json
+#: src/museable-title/block.json
+msgctxt "block keyword"
+msgid "title"
+msgstr ""
+
+#: build/museable-title/block.json
+#: src/museable-title/block.json
+msgctxt "block keyword"
+msgid "text"
+msgstr ""
+
+#: build/museable-title/block.json
+#: src/museable-title/block.json
+msgctxt "block description"
+msgid "This block will display title"
+msgstr ""

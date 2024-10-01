@@ -7,11 +7,22 @@
  * Author: Van Alfred Sabacajan
  * Author URI: https://github.com/vanskins/wp-museable-components
  * License: GPL2
+ * Text Domain: museable-components
+ * Domain Path: /languages
  */
 
 if (! defined('ABSPATH')) exit; // Exit if accessed directly
 
 register_activation_hook(__FILE__, 'custom_table_create');
+
+
+// Load the text domain for translations.
+function museable_components_plugin_load_textdomain()
+{
+  // load_plugin_textdomain('museable-components', false, basename(dirname(__FILE__)) . '/languages');
+  load_textdomain('museable-components', plugin_dir_path(__FILE__) . 'languages/museable-components-es_ES.mo');
+}
+add_action('init', 'museable_components_plugin_load_textdomain');
 
 function custom_table_create()
 {
@@ -115,6 +126,13 @@ function my_musable_components_index_register_block()
   register_block_type_from_metadata(__DIR__ . '/build/museable-title');
   register_block_type_from_metadata(__DIR__ . '/build/museable-cards', array(
     'render_callback' => 'render_collections_block',
+  ));
+
+  register_block_type_from_metadata(__DIR__ . '/build/museable-cards/block.json', array(
+    'textdomain' => 'museable-components'
+  ));
+  register_block_type_from_metadata(__DIR__ . '/build/museable-title/block.json', array(
+    'textdomain' => 'museable-components'
   ));
 }
 

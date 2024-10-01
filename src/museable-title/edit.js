@@ -48,10 +48,7 @@ const Edit = ({ attributes, setAttributes }) => {
           {[1, 2, 3, 4, 5, 6].map((headingLevel) => (
             <ToolbarButton
               key={headingLevel}
-              label={__(
-                "Heading " + headingLevel,
-                "custom-richtext-heading-block"
-              )}
+              label={__("Heading " + headingLevel, "museable-components")}
               isPressed={level === headingLevel}
               onClick={() => onChangeLevel(headingLevel)}
             >
@@ -63,18 +60,18 @@ const Edit = ({ attributes, setAttributes }) => {
 
       <InspectorControls>
         <PanelColorSettings
-          title={__("Color Settings", "custom-richtext-heading-block")}
+          title={__("Color Settings", "museable-components")}
           colorSettings={[
             {
               value: textColor,
               onChange: onChangeTextColor,
-              label: __("Text Color", "custom-richtext-heading-block"),
+              label: __("Text Color", "museable-components"),
               colors: COLORS,
             },
             {
               value: backgroundColor,
               onChange: onChangeBackgroundColor,
-              label: __("Background Color", "custom-richtext-heading-block"),
+              label: __("Background Color", "museable-components"),
               colors: COLORS,
             },
           ]}
@@ -85,7 +82,7 @@ const Edit = ({ attributes, setAttributes }) => {
         tagName={tagName}
         value={content}
         onChange={onChangeContent}
-        placeholder={__("Add heading...", "custom-richtext-heading-block")}
+        placeholder={__("Add heading...", "museable-components")}
         allowedFormats={["core/bold", "core/italic"]}
         style={{
           color: textColor,

@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/museable-"
 "components\n"
 "POT-Creation-Date: 2024-10-01T18:23:15+00:00\n"
-"PO-Revision-Date: 2024-10-02 03:01+0800\n"
+"PO-Revision-Date: 2024-10-02 10:03+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -66,12 +66,12 @@ msgstr "Añadir rúbrica..."
 #: build/museable-cards/block.json src/museable-cards/block.json
 msgctxt "block title"
 msgid "Museable Collections"
-msgstr "Museable Colecciones"
+msgstr "Colecciones museables"
 
 #: build/museable-title/block.json src/museable-title/block.json
 msgctxt "block title"
 msgid "Museable Title"
-msgstr "Museable Títulos"
+msgstr "Museable título"
 
 #: build/museable-title/block.json src/museable-title/block.json
 msgctxt "block keyword"
@@ -81,7 +81,7 @@ msgstr "título"
 #: build/museable-title/block.json src/museable-title/block.json
 msgctxt "block keyword"
 msgid "title"
-msgstr "títulos"
+msgstr "título"
 
 #: build/museable-title/block.json src/museable-title/block.json
 msgctxt "block keyword"

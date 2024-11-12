@@ -13,7 +13,7 @@ const Save = ({ attributes }) => {
         },
       })}
       tagName={tagName}
-      value={content ? content : ""} // Ensure content is always valid
+      value={content ? content : "Title element."} // Ensure content is always valid
     />
   );
 };
